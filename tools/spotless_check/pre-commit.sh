@@ -17,8 +17,8 @@
 #
 
 # A hook script to automatically fix code style and formatting errors with spotless
-if ./mvnw spotless:check; then
+if mvn spotless:check; then
   exit 0
 fi
-./mvnw spotless:apply
+mvn spotless:apply
 exit 1
